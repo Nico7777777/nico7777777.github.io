@@ -316,9 +316,15 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 145px;
+  /* max-width: 900px; */
   overflow: hidden;
   transition: var(--transition-2);
+  background-image: url('../images/pictures_with_me/eu_vacaresti.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 10%;
 }
 
 .sidebar.active { max-height: 405px; }
@@ -1799,7 +1805,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: auto; }
 
-  article { min-height: 100%; }
+  article { min-height: 50%; }
 
 
 
