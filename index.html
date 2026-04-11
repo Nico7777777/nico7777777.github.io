@@ -83,7 +83,6 @@
           <li class="contact-item">
 
             <div class="icon-box">
-<!--              <ion-icon name="phone-portrait-outline"></ion-icon>-->
               <img src="/assets/images/github-original-yellow3.svg" alt="GitHub">
             </div>
 
@@ -110,43 +109,29 @@
           </li>
           <!-- DREAPTA JOS -->
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>Bucharest, Romania</address>
             </div>
-
           </li>
 
+          <li class="contact-item">
+            <div class="icon-box">
+              <a href="https://www.linkedin.com/in/andrei-nicola-6a71801a3/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/andrei-nicola-6a71801a3/" class="contact-link">Nicola Andrei</a>
+            </div>
+          </li>
         </ul>
 
-<!--        <div class="separator"></div>-->
-<!--        <ul class="social-list">-->
 
-<!--          <li class="social-item">-->
-<!--            <a href="#" class="social-link">-->
-<!--              <ion-icon name="logo-facebook"></ion-icon>-->
-<!--            </a>-->
-<!--          </li>-->
-
-<!--          <li class="social-item">-->
-<!--            <a href="#" class="social-link">-->
-<!--              <ion-icon name="logo-twitter"></ion-icon>-->
-<!--            </a>-->
-<!--          </li>-->
-
-<!--          <li class="social-item">-->
-<!--            <a href="#" class="social-link">-->
-<!--              <ion-icon name="logo-instagram"></ion-icon>-->
-<!--            </a>-->
-<!--          </li>-->
-
-<!--        </ul>-->
 
       </div>
 
@@ -162,9 +147,7 @@
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
+      <!--- #NAVBAR --->
 
       <nav class="navbar">
 
@@ -177,13 +160,13 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
+          
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>More me</button>
           </li>
         </ul>
 
@@ -300,31 +283,58 @@
         </header>
 
         <section class="teaching-text">
-          <p>
-            I am a teaching assistant for the course of Computer Architecture at my faculty, where I assist students with their labs and projects, and also hold some lectures on topics like pipelining, cache memory, or virtual memory.
-          </p>
+          <p class="service-item-text">
+            am a teaching assistant for the following topics, where I aid younger students with their labs.
+          </p><br><br>
 
         </section>
 
         <section class="service">
                 
           <h3 class="h3 service-title">USO - Utilisation of Operating Systems</h3>
+          <p class="service-item-text">
+            USO is an introductory course to bash, Linux Kernel(or Ubuntu, for newbies) and eventually a starter
+            for bash scripting and low-level management of processes. Students use commands as <it>ls, chmod, kill, grep, whoami, mkdir, 
+            cp, mv, ifconfig, md5sum</it>. This is only a curated list, but we can go on and on.
+            <br><br>
+            Apart from only teaching labs alongside a more experienced fellow as his junior, I had also had the responsability of
+            writing the 2<sup>nd</sup> piece of homework, maintain the forum, the spelling and correctness of the sentence and 
+            last, but not least, setup the checker's server. The homework can be found here:<a href="https://ocw.cs.pub.ro/courses/uso/teme/tema-2">USO Tema 2</a>
+            </p>
         </section>
 
         <section class="service">
                 
           <h3 class="h3 service-title">FP - Functional Programming</h3>
+          <p class="service-item-text">
+            This is my <b>english-taught</b> laboratory at FILS faculty from UPB where I had the responsability of 
+            explaining and exercising alongside with students functional programming, the differences between 
+            Functional decomposition and OOP decomposition. Meanwhile, implementing all snippets in Scala programming language, 
+            which is a strongly-typed language.
+            <br><br>
+            The core topics approached are recursive functions as factorial, GCD, summing, operations over a range etc., higher-order 
+            functions and algebraic datatypes. We do labor the point over traits(~ classes and interfaces in Java) implementation for 
+            context reusability and tail recursive functions for stack overflow avoidance. 
+          </p>
         </section>
 
         <section class="service">
           <h3 class="h3 service-title">ED - Digital Electronics</h3>
+          <p class="service-item-text">
+            For this lab, students come with the foundamentals of analog electronics. We built upon it, the cores of digital:
+            0 and 1 based upon a voltage ladder and HIGH/LOW noise margin. We generate on arduino boards specific square signals 
+            in order to read both the input and the processed signals(due to a custom circuit) on oscilloscopes. 
+            <br><br>
+            Last, but not least they understand the cores of using a transistor - firstly a BJT and then evolving to MOSFETs. 
+            Eventually they are capable to built any regular logical gate - NOT, AND, OR - using external signals and a 
+            custom circuit and interpret results on a oscilloscope.
+
+          </p>
         </section>
       </article>
 
 
-      <!--
-        - #RESUME
-      -->
+      <!--- #RESUME --->
 
       <article class="resume" data-page="resume">
 
@@ -346,7 +356,7 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Faculty of Automatics and Computer Science—UNSTPB</h4>
+              <h4 class="h4 timeline-item-title">Faculty of Automatic Control and Computers — UNSTPB</h4>
 
               <span>2023 — 2027</span>
 
@@ -427,118 +437,196 @@
         </section>
 
         <!------------------------ sectiunea 3: LISTA ATEMPORALA 'SKILLS' --------------------------->
-        <section class="programming_languages">
+        <section class="programming_languages & communication">
+          <table width="100%">
+            <tr style="vertical-align: top;" width="100%">
+              <td width="40%" style="padding-left: 15px;">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <ion-icon name="book-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3">Programming</h3>
+                </div>
 
-          <h3 class="h3 skills-title">Programming Languages</h3>
+                <ul class="skills-list content-card">
+                  <!---------------------------- SKILL 1 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Python</h5>
+                      <p class="service-item-text">100%</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 100%;"></div>
+                    </div>
+                  </li>
 
-          <ul class="skills-list content-card">
-            <!---------------------------- SKILL 1 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="80">95%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-            </li>
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">C/C++</h5>
+                      <p class="service-item-text">90%</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 90%;"></div>
+                    </div>
+                  </li>
+                  
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Dart & Flutter</h5>
+                      <p class="service-item-text">80%</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 80%;"></div>
+                    </div>
+                  </li>
 
-            <!---------------------------- SKILL 2 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">C/C++</h5>
-                <data value="90">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Kotlin</h5>
+                      <p class="service-item-text">75%</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 75%;"></div>
+                    </div>
+                  </li>
 
-            <!---------------------------- SKILL 4 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Dart & Flutter</h5>
-                <data value="90">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Scala</h5>
+                    <p class="service-item-text">75%</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 75%;"></div>
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td width="10%"></td>
 
-            <!---------------------------- SKILL 5 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Kotlin</h5>
-                <data value="50">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-            
-            <!---------------------------- SKILL 6 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Scala</h5>
-                <data value="50">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
+              <td width="40%" style="padding-right: 15px;">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                  </div>
+                  <h3 class="h3">Communication</h3>
+                </div>
 
-          </ul>
+                <ul class="skills-list content-card">
+                  <!---------------------------- SKILL 1 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Romanian</h5>
+                      <p class="service-item-text">native</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 100%;"></div>
+                    </div>
+                  </li>
+
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">English</h5>
+                      <p class="service-item-text">C1</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 85%;"></div>
+                    </div>
+                  </li>
+                  
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">French</h5>
+                      <p class="service-item-text">B1+</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 65%;"></div>
+                    </div>
+                  </li>
+
+                  <!---------------------------- SKILL 2 ---------------------------------->
+                  <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Chinese</h5>
+                      <p class="service-item-text">HSK1</p>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 20%;"></div>
+                    </div>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
 
         </section>
+        <br>
 
-        <section class="Communication">
-          <h3 class="h3 skills-title">Communication</h3>
+        <section class="Extracurriculars">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Extracurricular</h3>
+          </div>
+          
+          <ol class="timeline-list">
 
-          <ul class="skills-list content-card">
-            <!---------------------------- SKILL 1 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Romanian</h5>
-                <data value="80">native</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SSS - Summer Security School</h4>
+              <span>2024 & 2025 summers</span>
+              <p class="timeline-text">
+                Completed all 3 tracks of <b>Essentials</b>, <b>Web</b> and <b>Binary</b> in 2 consecutive years. Started with zips, executables, misc 
+                and very basics of reverse engineering and Linux fundamental with application in security. Then learnt about cookies, SQL-injection 
+                during web track. Binary got me thrilled to bits when dived deeper into ASLR, PIE/PIC and stack canaries.
+              </p>
             </li>
 
-            <!---------------------------- SKILL 2 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">English</h5>
-                <data value="90">C1</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-            
-            <!---------------------------- SKILL 2 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">French</h5>
-                <data value="90">B1+</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AIMAS Summer School</h4>
+              <span>2024 summer</span>
+              <p class="timeline-text">
+                Built MLP, RNN and CNN basic DL architectures. Went further into CV applications in medical images as polyp detection and segmentation. On RL 
+                side, implemented RRT and RRT* algorithms. Eventually dived into NLP and open-source transformers from HuggingFace as BERT and how to fine-tune them for specific tasks.
+              </p>
             </li>
 
-            <!---------------------------- SKILL 2 ---------------------------------->
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Chinese</h5>
-                <data value="90">HSK1</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 20%;"></div>
-              </div>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Google @ Embedded Android SS</h4>
+              <span>2025 summer</span>
+              <p class="timeline-text">
+                one-week course where explored the huge AOSP project and customly built for 
+                a Raspberry Pi 4 and Touch Display 2 tablet configuration. On top of HAL built 
+                a user-friendly app for controlling GPIO ports.
+              </p>
             </li>
-          </ul>
+          </ol>
+        </section>
+
+        <section class="student-research">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Student Research</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Students 2Space</h4>
+              <span>2023 june - 2024 june</span>
+              <p class="timeline-text">
+                Been member of Students 2Space team's electronic department working on embedded systems for
+                the rocket NOR and also involved in several educational projects as SpaceFest or Qube2Space,
+                the very first Romanian CubeSat contest for highschool students.
+              </p>
+            </li>
+          </ol>
         </section>
       </article>
 
@@ -869,7 +957,7 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+      <!-- <article class="contact" data-page="contact">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
@@ -906,8 +994,12 @@
 
         </section>
 
+      </article> -->
+      <article class="more me" data-page="more me">
+        <header>
+          <h2 class="h2 article-title">More me</h2>
+        </header>
       </article>
-
     </div>
 
   </main>
