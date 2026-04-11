@@ -339,6 +339,8 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
+}
+.avatar-box img {
   border-radius: 20px;
 }
 
