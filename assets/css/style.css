@@ -395,6 +395,8 @@ main {
 .sidebar.active .sidebar-info_more {
   opacity: 1;
   visibility: visible;
+  padding-bottom: 10px;
+  overflow-y: auto;
 }
 
 .contacts-list {
@@ -402,7 +404,14 @@ main {
   grid-template-columns: 1fr;
   gap: 16px;
 }
-
+@media (max-width: 800px) {
+  .contacts-list {
+    gap: 8px;
+  }
+  .sidebar.active .sidebar-info_more {
+    padding-bottom: 5px;
+  }
+}
 .contact-item {
   min-width: 100%;
   display: flex;
