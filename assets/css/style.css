@@ -321,7 +321,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  background: var(--eerie-black-2);
 }
 .avatar-box img {
   border-radius: 20px;
