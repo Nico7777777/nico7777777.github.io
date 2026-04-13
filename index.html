@@ -5,22 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nick's Personal Portfolio</title>
+  <title>Nick's Page</title>
 
-  <!--
-    - favicon
-  -->
+  <!--- favicon --->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!--- custom css link --->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsiveness.css">
   <link rel="stylesheet" href="./assets/css/carousel.css">
 
-  <!--
-    - google font link
-  -->
+  <!--- google font link --->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -184,56 +179,23 @@
         </header>
 
 
-        <!--
-          - service
-        -->
+        <!--- service --->
 
         <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <!------------------------------ ITEM ------------------------------>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/machine-learning.webp" alt="Machine Learning" width="80">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Machine Learning</h4>
-
-                <p class="service-item-text">
-                  In my resume there are some personal projects focused on Machine Learning
-                  and Artificial Intelligence, realm in which I've learnt the
-                  ropes and I strike to delve more in depth.
-                </p>
-              </div>
-
-            </li>
-
-            <!------------------------------ ITEM ------------------------------>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/engineer-writer.webp" alt="Blog Writer" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Blog Writer</h4>
-
-                <p class="service-item-text">
-                  I have a blog on Medium where I write frequently on topics
-                  like programming, computer science, mathematics. Sometimes
-                  square up to the realm of economics or finance. Do give a
-                  read and tell me how it looks like.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
+          <div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap; margin-bottom: 20px; margin-left:30px; margin-right: 30px;">
+            <div style="flex: 2 1 300px;">
+              <p class="service-item-text">
+                I am a 3<sup>rd</sup> year Computer Engineering BCS student at ACS @ UPB in Bucharest. 
+                Keen on AI/ML, embedded systems and related fields. Additionally to most of geeks and nerds,
+                I strongly believe that I have a personal life, hobbies, do sports and can entertain a 
+                conversation above the LinkedIn bullshit that goes around this field. If you think our vibes 
+                match, hit me up!
+              </p>
+            </div>
+            <figure style="flex: 1 1 200px; max-width: 200px; margin: auto;">
+              <img src="./assets/images/pictures_with_me/eu_vacaresti.jpg" alt="Andrei Nicola" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-2); border: 2px solid var(--jet);">
+            </figure>
+          </div>
         </section>
 
 
@@ -605,6 +567,15 @@
                 a user-friendly app for controlling GPIO ports.
               </p>
             </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Electronics Summer School</h4>
+              <span>2025 summer</span>
+              <p class="timeline-text">
+                Designed the PCB for a musical organ using KiCAD, having low/band/high filters for each color 
+                of an RGB led matrix. Each color would turn on accordingly to its specific frequency range. Eventually, 
+                designed a custom case for the PCB using FreeCAD and 3D printed it.
+              </p>
           </ol>
         </section>
 
@@ -623,6 +594,15 @@
                 Been member of Students 2Space team's electronic department working on embedded systems for
                 the rocket NOR and also involved in several educational projects as SpaceFest or Qube2Space,
                 the very first Romanian CubeSat contest for highschool students.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SCSS 2024 - Didactical education</h4>
+              <p class="timeline-text">
+                SCSS - took the 2<sup>nd</sup> place in the Scientific Student Competition on 
+                the <b>didactical career education</b> section with the topic 'Impact of academic 
+                performance in professional success'.
               </p>
             </li>
           </ol>
