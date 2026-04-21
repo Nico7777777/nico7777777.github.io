@@ -181,23 +181,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const track = document.querySelector(".carousel-track");
-  const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-  const indicators = Array.from(document.querySelectorAll(".indicator"));
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
+// Initialize carousel functioning
+const carousels = document.querySelectorAll(".carousel-container");
+
+carousels.forEach(carousel => {
+  const track = carousel.querySelector(".carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+  const leftArrow = carousel.querySelector(".left-arrow");
+  const rightArrow = carousel.querySelector(".right-arrow");
+
+  if (!track || !leftArrow || !rightArrow) return;
 
   let currentIndex = 0;
 
   // Funcție pentru actualizarea caruselului
   function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    // Actualizează indicatori
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === currentIndex);
-    });
   }
 
   // Evenimente pentru săgeți
@@ -209,14 +208,6 @@ document.addEventListener("DOMContentLoaded", function() {
   rightArrow.addEventListener("click", () => {
     currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
     updateCarousel();
-  });
-
-  // Evenimente pentru indicatori
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      currentIndex = index;
-      updateCarousel();
-    });
   });
 
   // Inițializare
