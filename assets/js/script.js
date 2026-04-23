@@ -5,7 +5,19 @@ console.log('hat mat');
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
+function createContactItem({ icon, title, link, linkText }) {
+  return `
+    <li class="contact-item">
+      <div class="icon-box">
+        <img src="/assets/images/sidebar_logos/${icon}" alt="${title}">
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">${title}</p>
+        <a href="${link}" class="contact-link">${linkText}</a>
+      </div>
+    </li>
+  `;
+}
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -55,14 +67,11 @@ modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 
-
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
 
 console.log("selectItems:", selectItems);
 
@@ -142,7 +151,8 @@ for (let i = 0; i < formInputs.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
-
+console.log("Navigation links found:", navigationLinks);
+console.log("Pages found:", pages);
 console.log("In total, there are " + navigationLinks.length + " navigation links.");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function() {
@@ -218,3 +228,103 @@ carousels.forEach(carousel => {
   // Inițializare
   updateCarousel();
 });
+
+const contacts = [
+  { icon: "logo-gmail.png",  title: "Email",  link: "mailto:nicola.andrei.g@gmail.com",      linkText: "Email" },
+  { icon: "logo-github.png",   title: "GitHub",   link: "https://github.com/Nico7777777",      linkText: "Nico7777777" },
+  { icon: "logo-location.png", title: "Location", link: "", linkText: "Bucuresti, Romania" },
+  { icon: "logo-linkedin.png", title: "LinkedIn", link: "https://www.linkedin.com/in/andrei-nicola-6a71801a3/", linkText: "Nicola Andrei" },
+];
+
+document.querySelector(".contacts-list").innerHTML = contacts
+  .map(createContactItem)
+  .join("");
+
+
+class ServiceItem {
+  constructor(title, content) {
+    this.title = title;
+    this.content = content;
+  }
+
+  render() {
+    return `
+      <section class="service">
+        <h3 class="h3 service-title">${this.title}</h3>
+        <p class="service-item-text">${this.content}</p>
+      </section>
+    `;
+  }
+}
+
+const services = [
+  new ServiceItem(
+    "USO - Utilisation of Operating Systems",
+    `USO is an introductory course to bash, Linux Kernel(or Ubuntu, for newbies) and eventually a starter
+    for bash scripting and low-level management of processes. Students use commands as <it>ls, chmod, kill, grep, whoami, mkdir, 
+    cp, mv, ifconfig, md5sum</it>. This is only a curated list, but we can go on and on.
+    <br><br>
+    Apart from only teaching labs alongside a more experienced fellow as his junior, I had also had the responsability of
+    writing the 2<sup>nd</sup> piece of homework, maintain the forum, the spelling and correctness of the sentence and 
+    last, but not least, setup the checker's server. The homework can be found here:<a href="https://ocw.cs.pub.ro/courses/uso/teme/tema-2">USO Tema 2</a>`
+  ),
+  new ServiceItem(
+    "FP - Functional Programming",
+    `This is my <b>english-taught</b> laboratory at FILS faculty from UPB where I had the responsability of 
+    explaining and exercising alongside with students functional programming, the differences between 
+    Functional decomposition and OOP decomposition. Meanwhile, implementing all snippets in Scala programming language, 
+    which is a strongly-typed language.
+    <br><br>
+    The core topics approached are recursive functions as factorial, GCD, summing, operations over a range etc., higher-order 
+    functions and algebraic datatypes. We do labor the point over traits(~ classes and interfaces in Java) implementation for 
+    context reusability and tail recursive functions for stack overflow avoidance.`
+  ),
+  new ServiceItem(
+    "ED - Digital Electronics",
+    `For this lab, students come with the foundamentals of analog electronics. We built upon it, the cores of digital:
+    0 and 1 based upon a voltage ladder and HIGH/LOW noise margin. We generate on arduino boards specific square signals 
+    in order to read both the input and the processed signals(due to a custom circuit) on oscilloscopes. 
+    <br><br>
+    Last, but not least they understand the cores of using a transistor - firstly a BJT and then evolving to MOSFETs. 
+    Eventually they are capable to built any regular logical gate - NOT, AND, OR - using external signals and a 
+    custom circuit and interpret results on a oscilloscope.`
+  )
+];
+const aboutPage = document.querySelector("[data-page='about']");
+aboutPage.insertAdjacentHTML("beforeend", services
+  .map(service=> service.render())
+  .join("")
+);
+
+
+class LanguageItem {
+  constructor(lang, lvl) {
+    this.language = lang;
+    this.level = lvl;
+  }
+
+  render() {
+    return `
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">${this.language}</h5>
+          <p class="service-item-text">${this.level}</p>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 100%;"></div>
+        </div>
+      </li>
+    `;
+  }
+}
+const language_tiles = [
+  new LanguageItem("Romanian", "Native"),
+  new LanguageItem("English", "C1"),
+  new LanguageItem("French", "B1+"),
+  new LanguageItem("Chinese", "HSK1")
+]
+const LanguagesList = document.querySelector(".skills-list");
+LanguagesList.insertAdjacentHTML("beforeend", language_tiles
+  .map(lang => lang.render())
+  .join("")
+);
