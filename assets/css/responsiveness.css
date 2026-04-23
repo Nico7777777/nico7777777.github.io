@@ -107,7 +107,7 @@
    */
 
     .sidebar {
-        max-height: 180px;
+        max-height: 230px;
         margin-bottom: 30px;
     }
 
@@ -117,6 +117,7 @@
 
     .sidebar-info {
         gap: 25px;
+        padding-bottom: 10px;
     }
 
     .avatar-box {
