@@ -298,9 +298,10 @@ aboutPage.insertAdjacentHTML("beforeend", services
 
 
 class LanguageItem {
-  constructor(lang, lvl) {
+  constructor(lang, lvl, perc) {
     this.language = lang;
     this.level = lvl;
+    this.percentage = perc;
   }
 
   render() {
@@ -311,20 +312,57 @@ class LanguageItem {
           <p class="service-item-text">${this.level}</p>
         </div>
         <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 100%;"></div>
+          <div class="skill-progress-fill" style="width: ${this.percentage}%;"></div>
         </div>
       </li>
     `;
   }
 }
+
 const language_tiles = [
-  new LanguageItem("Romanian", "Native"),
-  new LanguageItem("English", "C1"),
-  new LanguageItem("French", "B1+"),
-  new LanguageItem("Chinese", "HSK1")
+  new LanguageItem("Romanian", "Native", 100),
+  new LanguageItem("English", "C1", 85),
+  new LanguageItem("French", "B1+", 60),
+  new LanguageItem("Chinese", "HSK1", 30)
 ]
-const LanguagesList = document.querySelector(".skills-list");
+const LanguagesList = document.querySelectorAll(".skills-list")[1];
 LanguagesList.insertAdjacentHTML("beforeend", language_tiles
   .map(lang => lang.render())
   .join("")
 );
+
+
+class ProgLangItem {
+  constructor(lang, perc) {
+    this.language = lang;
+    this.percentage = perc;
+  }
+  render() {
+    return `
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">${this.language}</h5>
+          <p class="service-item-text">${this.percentage}</p>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: ${this.percentage}%"></div>
+        </div>
+      </li>
+    `;
+  }
+}
+const prog_lang_tiles = [
+  new ProgLangItem("Python", 100),
+  new ProgLangItem("C/C++", 90),
+  new ProgLangItem("Dart & Flutter", 80),
+  new ProgLangItem("Kotlin", 75),
+  new ProgLangItem("Scala", 65)
+]
+
+const ProgLanguagesList = document.querySelectorAll(".skills-list")[0];
+ProgLanguagesList.insertAdjacentHTML("beforeend", prog_lang_tiles
+  .map(lang => lang.render())
+  .join("")
+);
+
+
