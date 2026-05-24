@@ -72,7 +72,6 @@
         { id: 'navbar-container', url: './components/navbar.html' },
         { id: 'about-container', url: './components/about.html' },
         { id: 'resume-container', url: './components/resume.html' },
-        { id: 'portfolio-container', url: './components/portfolio.html' },
         { id: 'blog-container', url: './components/blog.html' },
         { id: 'more_me-container', url: './components/more_me.html' }
       ];
@@ -96,6 +95,9 @@
       const script = document.createElement('script');
       script.src = "./assets/js/script.js";
       document.body.appendChild(script);
+      const more_me_script = document.createElement('script');
+      more_me_script.src = "./assets/js/more_me.js";
+      document.body.appendChild(more_me_script);
     }
     loadComponents();
   </script>
