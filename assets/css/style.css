@@ -180,8 +180,8 @@ article {
   z-index: 1;
 }
 .icon-box img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 
 .icon-box::before {
