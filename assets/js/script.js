@@ -298,32 +298,37 @@ aboutPage.insertAdjacentHTML("beforeend", services
 
 
 class LanguageItem {
-  constructor(lang, lvl, perc) {
+  constructor(lang, lvl, perc, link) {
     this.language = lang;
     this.level = lvl;
     this.percentage = perc;
+    this.link = link;
   }
 
   render() {
+    const content = `
+      <div class="title-wrapper">
+        <h5 class="h5">${this.language}</h5>
+        <p class="service-item-text">${this.level}</p>
+      </div>
+      <div class="skill-progress-bg">
+        <div class="skill-progress-fill" style="width: ${this.percentage}%;"></div>
+      </div>
+    `;
+
     return `
       <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">${this.language}</h5>
-          <p class="service-item-text">${this.level}</p>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: ${this.percentage}%;"></div>
-        </div>
+        ${this.link ? `<a href="${this.link}">${content}</a>` : content}
       </li>
     `;
   }
 }
 
 const language_tiles = [
-  new LanguageItem("Romanian", "Native", 100),
-  new LanguageItem("English", "C1", 85),
-  new LanguageItem("French", "B1+", 60),
-  new LanguageItem("Chinese", "HSK1", 30)
+  new LanguageItem("Romanian", "Native", 100, null),
+  new LanguageItem("English", "C1", 85, "assets/images/certificates/CAE.jpeg"),
+  new LanguageItem("French", "B1+", 60, null),
+  new LanguageItem("Chinese", "HSK1", 30, "assets/images/certificates/HSK1.jpeg")
 ]
 const LanguagesList = document.querySelectorAll(".skills-list")[1];
 LanguagesList.insertAdjacentHTML("beforeend", language_tiles
