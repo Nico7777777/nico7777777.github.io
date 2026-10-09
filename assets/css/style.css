@@ -58,6 +58,7 @@
 
   /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
+  --ff-orbitron: 'Orbitron', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -339,6 +340,16 @@ main {
   margin-bottom: 10px;
 }
 
+.info-content .callsign {
+  color: var(--orange-yellow-crayola);
+  font-family: var(--ff-orbitron);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
@@ -571,6 +582,11 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+}
+
+.tema-link {
+  color: var(--white-2);
+  text-decoration: underline;
 }
 
 

@@ -63,8 +63,10 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn && overlay) {
+  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+  overlay.addEventListener("click", testimonialsModalFunc);
+}
 
 
 // custom select variables
@@ -266,7 +268,7 @@ const services = [
     <br><br>
     Apart from only teaching labs alongside a more experienced fellow as his junior, I had also had the responsability of
     writing the 2<sup>nd</sup> piece of homework, maintain the forum, the spelling and correctness of the sentence and 
-    last, but not least, setup the checker's server. The homework can be found here:<a href="https://ocw.cs.pub.ro/courses/uso/teme/tema-2">USO Tema 2</a>`
+    last, but not least, setup the checker's server. The homework can be found here:<a href="https://ocw.cs.pub.ro/courses/uso/teme/tema-2"><span class="tema-link">USO Homework 2</span></a>`
   ),
   new ServiceItem(
     "FP - Functional Programming",
